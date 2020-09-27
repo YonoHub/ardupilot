@@ -29,7 +29,7 @@ while getopts "yq" opt; do
     esac
 done
 
-APT_GET="sudo apt-get"
+APT_GET="apt-get"
 if $ASSUME_YES; then
     APT_GET="$APT_GET --assume-yes"
 fi
@@ -151,7 +151,7 @@ fi
 echo "$sep"
 echo "Add user to dialout group to allow managing serial ports"
 echo "$sep"
-usermod -a -G dialout $USER
+# usermod -a -G dialout $USER
 echo "Done!"
 
 # Add back python symlink to python interpreter on Ubuntu >= 20.04
