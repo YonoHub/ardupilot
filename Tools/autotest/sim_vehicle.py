@@ -693,7 +693,7 @@ def start_mavproxy(opts, stuff):
         cmd.append("-w")
         cmd.append("mavproxy.exe")
     else:
-        cmd.append("mavproxy.py")
+        cmd.append("python2.7 /root/MAVProxy/MAVProxy/mavproxy.py")
 
     if opts.tracker:
         cmd.extend(["--load-module", "tracker"])
